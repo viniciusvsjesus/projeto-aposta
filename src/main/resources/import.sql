@@ -1,0 +1,3 @@
+insert into continente (nome) values("América Do Sul"),("Europa"),("América do Norte");
+insert into country (nome, continente_id) values("Brasil",1),("Inglaterra", 2),("Espanha",2),("Italia",2),("Estados Unidos",3);
+insert into clube (nome, country_id) values("Corinthians",1),("Palmeiras",1),("Liverpool",2),("Manchester City",2),("Real Madrid",3),("Barcelona",3),("Milan",4),("Juventus",4),("New York City",5),("orlando City",5);
