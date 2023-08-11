@@ -1,5 +1,7 @@
 package com.sistema.aposta.model;
 
+import java.util.Objects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -43,4 +45,23 @@ public class Country {
 		this.continente = continente;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(continente, id, nome);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Country other = (Country) obj;
+		return Objects.equals(continente, other.continente) && Objects.equals(id, other.id)
+				&& Objects.equals(nome, other.nome);
+	}
+
+	
 }
